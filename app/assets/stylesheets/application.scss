@@ -15,7 +15,7 @@
  */
 
  $white_opaque: rgba(250, 250, 250, .3);
- $dark: rgb(143, 148, 147);
+ $dark: rgb(172, 155, 80);
 
 * {
 	box-sizing: border-box;
@@ -84,12 +84,23 @@ body {
 
 .heading {
     color: aqua;
-    animation: backwards;
+    animation: glow 1.5s infinite alternate;
     height: 120%;
     width: 100%;
     padding: 5px 5px 5px 5px;
     font: sans-serif;
     text-align: center;
+    font-size: xx-large;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(0, 128, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(0, 128, 255, 0.8),
+                    0 0 30px rgba(0, 128, 255, 0.6),
+                    0 0 40px rgba(0, 128, 255, 0.4);
+    }
 }
 
 .index_row {
